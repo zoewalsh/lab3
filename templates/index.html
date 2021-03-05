@@ -37,13 +37,13 @@
   zoomOffset: -1,
   accessToken: 'pk.eyJ1Ijoiem9ld2Fsc2giLCJhIjoiY2trbGl2NzVmMWp2YjMxcTlpcmF3eXZ5YSJ9.UVZBfaC844oYgXMD0KlPDA'
   });
-
+  //store the 3 basemaps
   var baseMaps = {
       "Streets": streets,
       "Collisions": collision,
       "Collisions with<br/>HeatMap":heat
   };
-
+  //layer control toggle
   var layerscontrol = L.control.layers(baseMaps, null, {position:'topleft'}).addTo(map);
 
   // initialize clusters
