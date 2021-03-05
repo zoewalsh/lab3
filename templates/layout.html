@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Calgary Building Permits</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <link rel="icon" href="data:;base64,=">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script src="https://unpkg.com/esri-leaflet@2.5.3/dist/esri-leaflet.js"integrity="sha512-K0Vddb4QdnVOAuPJBHkgrua+/A9Moyv8AQEWi0xndQ+fqbRfAFd47z4A9u1AW/spLO0gEaiE1z98PK1gl5mC5Q=="crossorigin=""></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OverlappingMarkerSpiderfier-Leaflet/0.2.6/oms.min.js"></script>
+    <script src="https://api.tiles.mapbox.com/mapbox.js/plugins/leaflet-markercluster/v0.4.0/leaflet.markercluster.js"></script>
+    <script src="https://leaflet.github.io/Leaflet.markercluster/dist/leaflet.markercluster.js"></script>
+    <link rel="stylesheet" href="https://leaflet.github.io/Leaflet.markercluster/dist/MarkerCluster.css" />
+    <link rel="stylesheet" href="https://leaflet.github.io/Leaflet.markercluster/dist/MarkerCluster.Default.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js" integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj" crossorigin="anonymous"></script>
+  </head>
+
+  <style>
+
+  #mapid {
+    position: absolute;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+  }
+
+  #time-ranges {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 1000;
+    padding: 0.7em;
+    background: white;
+    border: 1px solid #738080;
+  }
+  #time-ranges input {
+    display: inline-block;
+    border: 1px solid #4D5656;
+    font-size: 14px;
+    border-radius: 4px;
+    height: 38px;
+    line-height: 28px;
+  }
+
+  .middle{
+    margin:auto;
+    width:100%;
+    padding: 20px;
+    text-align:center;
+  }
+
+  .left{
+    margin-left: 80px;
+    margin-right: 80px;
+    width:100%;
+    padding: 20px 20px;
+  }
+
+  h1{
+    font-family: consolas, sans-serif;
+    color:#4D5656;
+    font-size:18px!important;
+  }
+
+  h2{
+    font-family: consolas, sans-serif;
+    color:#4D5656;
+    font-size:14px!important;
+  }
+
+  h3{
+    font-family: consolas, sans-serif;
+    color:#0275d8;
+    font-size:12px!important;
+  }
+  h4{
+    font-family: consolas, sans-serif;
+    color:#C70039;
+    font-size:12px!important;
+  }
+  h5{
+    font-family: consolas, sans-serif;
+    color:#FC9A15;
+    font-size:12px!important;
+  }
+  </style>
+
+  <body>
+    <div class="middle">
+        {% block heading %}
+        {% endblock %}
+      <div id="mapid">
+        {% block body %}
+        {% endblock %}
+      </div>
+    </div>
+  </body>
+</html>
