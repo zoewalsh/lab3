@@ -8,7 +8,7 @@ related to this dataset. This was also the default style used in Lab2. I chose t
 for the data points in my first layer. I left the default brown colour since it matched the base map style and was easily distinguishable. I left the
 opacity at 1 and the size at 1 to ensure the points were easily visible and not overwhelming. I chose to create an additional layer that also added a heatmap
 to my first map. This was done by simply loading in the Tileset again and changing its type to "Heatmap". I changed the opacity of this layer to 0.2 to
-ensure the base map could still be easily seen underneath.
+ensure the base map could still be easily seen underneath. I changed the intensity to 0.3.
 
 Updates to Lab2:
 index.html - Two additional Mapbox tile layers were added (one for the collision points, and one for the collision points with a heatmap). A layer
